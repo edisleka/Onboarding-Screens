@@ -1,16 +1,8 @@
-import {
-  COLORS,
-  DIMENSIONS,
-  ONBOARDING_SLIDES,
-  Slide,
-} from '@constants/app.constants'
+import { OnboardingProps, Slide } from '@/types/onboarding.types'
+import { COLORS, DIMENSIONS, ONBOARDING_SLIDES } from '@constants/app.constants'
 import { Image } from 'expo-image'
 import { Text, View } from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider'
-
-interface OnboardingProps {
-  onDone: () => void
-}
 
 export default function Onboarding({ onDone }: OnboardingProps) {
   const renderItem = ({ item }: { item: Slide }) => (

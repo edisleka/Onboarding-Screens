@@ -1,3 +1,4 @@
+import { Slide } from '@/types/onboarding.types'
 import { Dimensions } from 'react-native'
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window')
@@ -57,14 +58,6 @@ export const BORDER_RADIUS = {
   xl: 16,
   full: 9999,
 } as const
-
-export interface Slide {
-  key: string
-  title: string
-  text: string
-  image: any
-  backgroundColor: string
-}
 
 export const ONBOARDING_SLIDES: Slide[] = [
   {
