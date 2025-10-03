@@ -1,39 +1,12 @@
-import { COLORS, DIMENSIONS } from '@root/src/app.constants'
+import {
+  COLORS,
+  DIMENSIONS,
+  ONBOARDING_SLIDES,
+  Slide,
+} from '@constants/app.constants'
 import { Image } from 'expo-image'
 import { Text, View } from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider'
-
-interface Slide {
-  key: string
-  title: string
-  text: string
-  image: any
-  backgroundColor: string
-}
-
-const slides: Slide[] = [
-  {
-    key: 'one',
-    title: 'Welcome',
-    text: 'Simple onboarding with React Native',
-    image: require('@img/onboarding-1.png'),
-    backgroundColor: '#FEF3E2',
-  },
-  {
-    key: 'two',
-    title: 'Fast Setup',
-    text: 'Built using Expo and ready to go',
-    image: require('@img/onboarding-2.png'),
-    backgroundColor: '#E8F4F8',
-  },
-  {
-    key: 'three',
-    title: 'Get Started',
-    text: "Let's dive in and start building something amazing!",
-    image: require('@img/onboarding-3.png'),
-    backgroundColor: '#F0F8F4',
-  },
-]
 
 interface OnboardingProps {
   onDone: () => void
@@ -91,7 +64,7 @@ export default function Onboarding({ onDone }: OnboardingProps) {
         height: 10,
       }}
       renderItem={renderItem}
-      data={slides}
+      data={ONBOARDING_SLIDES}
       onDone={onDone}
       showSkipButton={true}
       renderNextButton={() => renderButton('Next', true)}

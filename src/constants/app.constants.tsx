@@ -57,3 +57,35 @@ export const BORDER_RADIUS = {
   xl: 16,
   full: 9999,
 } as const
+
+export interface Slide {
+  key: string
+  title: string
+  text: string
+  image: any
+  backgroundColor: string
+}
+
+export const ONBOARDING_SLIDES: Slide[] = [
+  {
+    key: 'one',
+    title: 'Welcome',
+    text: 'Simple onboarding with React Native',
+    image: require('@img/onboarding-1.png'),
+    backgroundColor: '#FEF3E2',
+  },
+  {
+    key: 'two',
+    title: 'Fast Setup',
+    text: 'Built using Expo and ready to go',
+    image: require('@img/onboarding-2.png'),
+    backgroundColor: '#E8F4F8',
+  },
+  {
+    key: 'three',
+    title: 'Get Started',
+    text: "Let's dive in and start building something amazing!",
+    image: require('@img/onboarding-3.png'),
+    backgroundColor: '#F0F8F4',
+  },
+]
