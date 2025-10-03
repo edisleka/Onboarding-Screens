@@ -21,10 +21,16 @@ export default function Onboarding({ onDone }: OnboardingProps) {
           transition={300}
           className='mb-12 rounded-3xl'
         />
-        <Text className='text-4xl font-bold text-gray-900 mb-4 text-center'>
+        <Text
+          className='text-4xl font-bold mb-4 text-center'
+          style={{ color: COLORS.text.primary }}
+        >
           {item.title}
         </Text>
-        <Text className='text-lg text-gray-600 text-center leading-7 px-4'>
+        <Text
+          className='text-lg text-center leading-7 px-4'
+          style={{ color: COLORS.text.secondary }}
+        >
           {item.text}
         </Text>
       </View>
@@ -34,13 +40,17 @@ export default function Onboarding({ onDone }: OnboardingProps) {
   const renderButton = (label: string, isPrimary = false) => (
     <View
       className={`px-6 py-3 rounded-full min-w-[80px] items-center ${
-        isPrimary ? 'bg-blue-500 shadow-lg' : 'bg-transparent'
+        isPrimary ? 'shadow-lg' : 'bg-transparent'
       }`}
+      style={{
+        backgroundColor: isPrimary ? COLORS.primary : 'transparent',
+      }}
     >
       <Text
-        className={`text-base font-semibold ${
-          isPrimary ? 'text-white' : 'text-gray-700'
-        }`}
+        className={`text-base font-semibold ${isPrimary ? 'text-white' : ''}`}
+        style={{
+          color: isPrimary ? COLORS.text.inverse : COLORS.text.secondary,
+        }}
       >
         {label}
       </Text>

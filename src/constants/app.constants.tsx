@@ -24,22 +24,53 @@ export const FONT_SIZE = {
 } as const
 
 export const COLORS = {
-  primary: '#4A90E2',
-  primaryDark: '#357ABD',
-  secondary: '#50E3C2',
+  // Primary brand colors - Modern blue palette
+  primary: '#3B82F6', // Bright blue
+  primaryDark: '#2563EB', // Darker blue
+  primaryLight: '#60A5FA', // Light blue
+
+  // Secondary accent colors
+  secondary: '#8B5CF6', // Purple
+  secondaryLight: '#A78BFA',
+  accent: '#EC4899', // Pink
+
+  // Semantic colors
+  success: '#10B981', // Green
+  warning: '#F59E0B', // Amber
+  error: '#EF4444', // Red
+  info: '#3B82F6', // Blue
+
+  // Neutral colors
   background: '#FFFFFF',
+  backgroundAlt: '#F9FAFB',
+  surface: '#FFFFFF',
+
+  // Text colors
   text: {
-    primary: '#1A1A1A',
-    secondary: '#666666',
-    light: '#999999',
+    primary: '#111827', // Almost black
+    secondary: '#6B7280', // Medium gray
+    tertiary: '#9CA3AF', // Light gray
+    inverse: '#FFFFFF', // White text
   },
+
+  // Border colors
   border: {
-    light: '#E0E0E0',
-    medium: '#CCCCCC',
+    light: '#E5E7EB',
+    medium: '#D1D5DB',
+    dark: '#9CA3AF',
   },
+
+  // Dot pagination colors
   dot: {
     inactive: '#D1D5DB',
-    active: '#4A90E2',
+    active: '#3B82F6',
+  },
+
+  // Onboarding slide backgrounds
+  slides: {
+    one: '#EEF2FF', // Indigo tint
+    two: '#F0FDFA', // Teal tint
+    three: '#FEF3E2', // Amber tint
   },
 } as const
 
@@ -65,20 +96,20 @@ export const ONBOARDING_SLIDES: Slide[] = [
     title: 'Welcome',
     text: 'Simple onboarding with React Native',
     image: require('@img/onboarding-1.png'),
-    backgroundColor: '#FEF3E2',
+    backgroundColor: COLORS.slides.one,
   },
   {
     key: 'two',
     title: 'Fast Setup',
     text: 'Built using Expo and ready to go',
     image: require('@img/onboarding-2.png'),
-    backgroundColor: '#E8F4F8',
+    backgroundColor: COLORS.slides.two,
   },
   {
     key: 'three',
     title: 'Get Started',
     text: "Let's dive in and start building something amazing!",
     image: require('@img/onboarding-3.png'),
-    backgroundColor: '#F0F8F4',
+    backgroundColor: COLORS.slides.three,
   },
 ]

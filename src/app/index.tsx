@@ -1,4 +1,5 @@
-import Onboarding from '@components/onboarding'
+import { COLORS } from '@constants/app.constants'
+import Onboarding from '@screens/onboarding'
 import React, { useState } from 'react'
 import { Text, View } from 'react-native'
 
@@ -10,10 +11,20 @@ export default function App() {
   }
 
   return (
-    <View className='flex-1 justify-center items-center bg-white'>
-      <Text className='text-5xl font-bold text-gray-900 mb-4'>🎉</Text>
-      <Text className='text-3xl font-bold text-gray-900 mb-2'>Welcome!</Text>
-      <Text className='text-lg text-gray-600'>Main App Content</Text>
+    <View
+      className='flex-1 justify-center items-center'
+      style={{ backgroundColor: COLORS.background }}
+    >
+      <Text className='text-5xl mb-6'>🎉</Text>
+      <Text
+        className='text-3xl font-bold mb-2'
+        style={{ color: COLORS.text.primary }}
+      >
+        Welcome!
+      </Text>
+      <Text className='text-lg' style={{ color: COLORS.text.secondary }}>
+        Main App Content
+      </Text>
     </View>
   )
 }

@@ -12,7 +12,8 @@
       "@types/*": ["./src/types/*"],
       "@assets/*": ["./assets/*"],
       "@components/*": ["./src/components/*"],
-      "@img/*": ["./assets/images/*"]
+      "@img/*": ["./assets/images/*"],
+      "@screens/*": ["./src/screens/*"]
     }
   },
   "include": [
